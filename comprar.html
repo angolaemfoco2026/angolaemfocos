@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comprar Guia Prático — Angola em Foco</title>
+<meta name="description" content="Adquira o Guia Prático de Informações e Oportunidades — Angola em Foco.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:linear-gradient(135deg,#f1f3f4,#fff);
+color:#111;
+min-height:100vh;
+padding:24px 14px;
+}
+.card{
+max-width:620px;margin:auto;background:#fff;border-radius:26px;
+padding:30px 22px;box-shadow:0 10px 35px rgba(0,0,0,.10);
+text-align:center;
+}
+.flag{font-size:48px}
+h1{font-size:30px;margin:10px 0 8px}
+.subtitle{color:#555;line-height:1.5;margin-bottom:22px}
+.price{
+font-size:30px;font-weight:800;margin:20px 0;
+}
+.box{
+background:#f7f8f8;border-radius:18px;padding:20px;text-align:left;margin-top:18px;
+}
+.box h2{font-size:20px;margin-bottom:14px;text-align:center}
+.payment{
+background:#fff;border:1px solid #ddd;border-radius:13px;padding:14px;margin:10px 0;
+}
+.label{font-weight:bold;margin-bottom:6px}
+.number{font-size:16px;word-break:break-word}
+button{
+width:100%;border:0;border-radius:10px;padding:12px;margin-top:10px;
+background:#222;color:#fff;font-weight:bold;font-size:15px;
+}
+.whatsapp{
+display:block;text-decoration:none;background:#0aa344;color:#fff;
+padding:16px;border-radius:13px;font-weight:bold;font-size:18px;margin-top:18px;
+}
+.note{font-size:13px;color:#666;line-height:1.5;margin-top:16px}
+.footer{font-size:13px;color:#888;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="flag">🇦🇴</div>
+<h1>Guia Prático de Informações e Oportunidades</h1>
+<p class="subtitle">
+Um guia digital do <b>Angola em Foco</b> para ajudar a organizar objetivos,
+encontrar oportunidades e transformar competências em projetos.
+</p>
+
+<div class="price">1.000 Kz</div>
+
+<div class="box">
+<h2>📘 O que vais receber?</h2>
+<p class="subtitle" style="margin-bottom:0">
+E-book em PDF com índice, orientações práticas, segurança financeira,
+plano de 30 dias e checklist para começar.
+</p>
+</div>
+
+<div class="box">
+<h2>💳 Como pagar</h2>
+
+<div class="payment">
+<div class="label">📱 MULTICAIXA Express</div>
+<div class="number" id="express">974 488 355</div>
+<button onclick="copiar('express')">📋 Copiar número</button>
+</div>
+
+<div class="payment">
+<div class="label">🏦 IBAN</div>
+<div class="number" id="iban">0040 0000 38718925101 43</div>
+<button onclick="copiar('iban')">📋 Copiar IBAN</button>
+</div>
+</div>
+
+<a class="whatsapp"
+href="https://wa.me/244974488355?text=Ol%C3%A1!%20Fiz%20o%20pagamento%20do%20Guia%20Pr%C3%A1tico%20de%20Angola%20em%20Foco.%20Vou%20enviar%20o%20comprovativo."
+target="_blank" rel="noopener noreferrer">
+📲 Enviar comprovativo pelo WhatsApp
+</a>
+
+<p class="note">
+Depois de efetuar o pagamento, envia o comprovativo pelo WhatsApp.
+O PDF será enviado após a confirmação do pagamento.
+<br><br>
+⚠️ Nunca envie PIN, palavra-passe ou códigos de confirmação.
+</p>
+
+<div class="footer">🇦🇴 Angola em Foco • Informação • Oportunidades • Comunidade</div>
+</div>
+
+<script>
+function copiar(id){
+const texto=document.getElementById(id).innerText.trim();
+if(navigator.clipboard){
+navigator.clipboard.writeText(texto).then(()=>alert("Copiado com sucesso! ✅"))
+.catch(()=>alert("Não foi possível copiar. Mantém o dedo sobre o número para copiar."));
+}else{
+alert("Mantém o dedo sobre o número para copiar.");
+}
+}
+</script>
+</body>
+</html>
